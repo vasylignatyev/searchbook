@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BookSearch</string>
+    <string name="search_result__for">Search Result for</string>
+    <string name="search_btn">Search</string>
+    <string name="search_hint">Search</string>
+    <string name="title_activity_book_detail">Book Details</string>
+    <string name="search_text">Search</string>
+    <string name="share_text">Share</string>
+    <string name="emptyList">Empty Search Result</string>
+</resources>
