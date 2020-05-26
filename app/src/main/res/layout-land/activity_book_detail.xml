@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BookListActivity">
+
+    <ImageView
+        android:id="@+id/ivBookCover"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Book Cover Missing" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="326dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="106dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="28sp" />
+
+        <TextView
+            android:id="@+id/tvAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="477dp"
+            android:layout_marginTop="86dp"
+            android:layout_marginEnd="254dp"
+            android:textSize="22sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="135dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/tvPublisher"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="428dp"
+            android:layout_marginTop="217dp"
+            android:layout_marginEnd="204dp"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+</RelativeLayout>

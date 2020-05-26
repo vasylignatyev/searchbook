@@ -14,7 +14,10 @@
         <activity android:name=".activities.ErrorActivity"
             android:parentActivityName=".activities.BookSearchActivity">
         </activity>
-        <activity android:name=".activities.BookSearchActivity">
+        <activity android:name=".activities.BookSearchActivity"
+            android:configChanges="keyboardHidden|screenSize"
+            android:label="Book Search"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,11 +25,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.BookListActivity"
+            android:label="Search Result"
             android:parentActivityName=".activities.BookSearchActivity">
         </activity>
         <activity
             android:name=".activities.BookDetailActivity"
-            android:label="@string/title_activity_book_detail"></activity>
+            android:label="@string/title_activity_book_detail"
+            android:configChanges="keyboardHidden|screenSize"
+            >
+        </activity>
     </application>
 
 </manifest>

@@ -18,7 +18,6 @@ public class BookClient {
         return API_BASE_URL + relativeUrl;
     }
 
-    // Method for accessing the search API
     public void getBooks(final String query, JsonHttpResponseHandler handler) {
         try {
             String url = getApiUrl("search.json?q=");

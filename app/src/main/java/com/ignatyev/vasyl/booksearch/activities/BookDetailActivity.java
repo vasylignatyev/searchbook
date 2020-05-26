@@ -6,6 +6,7 @@ import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -15,10 +16,8 @@ import android.os.Environment;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
-import android.widget.ShareActionProvider;
 import android.widget.TextView;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
@@ -31,7 +30,6 @@ public class BookDetailActivity extends AppCompatActivity {
     private TextView tvAuthor;
     private TextView tvPublisher;
 
-    private ShareActionProvider mShareActionProvider;
     private Intent shareIntent;
 
     @Override
@@ -45,11 +43,20 @@ public class BookDetailActivity extends AppCompatActivity {
         tvPublisher = (TextView) findViewById(R.id.tvPublisher);
 
         Book book = getIntent().getParcelableExtra("book");
-        ActionBar actionBar = getSupportActionBar(); // or getActionBar();
         getSupportActionBar().setTitle(book.getTitle()); // set the top title
         populateDetailView(book);
     }
-
+/*
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            createHorizontalalLayout();
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+            createVerticalLayout();
+        }
+    }
+*/
     void populateDetailView(Book book) {
         ivBookCover.setImageResource(0);
         Picasso.with(getApplicationContext()).load(book.getCoverUrl()).into(ivBookCover,
